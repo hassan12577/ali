@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أداة ضغط الصور - Image Compression Tool</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Professional Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="brand-icon me-3">
+                    <i class="bi bi-image-fill"></i>
+                </div>
+                <div>
+                    <div class="brand-title">أداة ضغط الصور</div>
+                    <div class="brand-subtitle">Professional Image Compression</div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">المميزات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#compression-section">البدء</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="hero-title">ضغط الصور بأعلى جودة واحترافية</h1>
+                        <p class="hero-subtitle">أداة متقدمة لضغط الصور مع الحفاظ على الجودة العالية والأداء السريع. تدعم جميع التنسيقات وتوفر ضغطاً ذكياً يوفر مساحة تخزين كبيرة.</p>
+                        <div class="hero-features">
+                            <div class="feature-item">
+                                <i class="bi bi-lightning-charge-fill"></i>
+                                <span>ضغط سريع في ثوانٍ</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-shield-check-fill"></i>
+                                <span>أمان تام وخصوصية</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-cloud-download-fill"></i>
+                                <span>مجاني تماماً</span>
+                            </div>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <div class="stat-number">500K+</div>
+                                <div class="stat-label">صورة مضغوطة</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">95%</div>
+                                <div class="stat-label">رضا المستخدمين</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">دعم متواصل</div>
+                            </div>
+                        </div>
+                        <a href="#compression-section" class="btn btn-primary btn-lg hero-cta">
+                            <i class="bi bi-play-circle-fill me-2"></i>ابدأ الضغط الآن
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-visual">
+                        <div class="compression-demo">
+                            <div class="demo-card original">
+                                <div class="demo-header">
+                                    <span class="demo-label">الصورة الأصلية</span>
+                                    <span class="demo-size">2.4 MB</span>
+                                </div>
+                                <div class="demo-image">
+                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDMwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOUI5QkE0IiBmb250LXNpemU9IjE2Ij5JbWFnZTwvdGV4dD4KPC9zdmc+" alt="Original">
+                                </div>
+                            </div>
+                            <div class="demo-arrow">
+                                <i class="bi bi-arrow-down"></i>
+                            </div>
+                            <div class="demo-card compressed">
+                                <div class="demo-header">
+                                    <span class="demo-label">الصورة المضغوطة</span>
+                                    <span class="demo-size demo-saved">-78% | 520 KB</span>
+                                </div>
+                                <div class="demo-image">
+                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDMwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNUI5QkQ1IiBmb250LXNpemU9IjE2Ij5Db21wcmVzc2VkPC90ZXh0Pgo8L3N2Zz4=" alt="Compressed">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg-shape"></div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>لماذا تختار أداتنا؟</h2>
+                <p class="section-subtitle">مميزات احترافية تجعل ضغط الصور أمراً سهلاً وفعالاً</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-speedometer2"></i>
+                        </div>
+                        <h3>أداء سريع</h3>
+                        <p>ضغط الصور في ثوانٍ مع الحفاظ على الجودة العالية باستخدام خوارزميات متقدمة</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-file-earmark-image"></i>
+                        </div>
+                        <h3>دعم جميع التنسيقات</h3>
+                        <p>JPEG, PNG, WebP, GIF وغيرها من التنسيقات الشائعة مع تحويل ذكي</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-shield-lock"></i>
+                        </div>
+                        <h3>أمان تام</h3>
+                        <p>معالجة الصور محلياً دون رفعها للخوادم، ضمان خصوصية بياناتك</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-gear"></i>
+                        </div>
+                        <h3>إعدادات متقدمة</h3>
+                        <p>تحكم كامل في جودة الضغط، الأبعاد، والتنسيق مع خيارات مخصصة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section id="compression-section" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card shadow-lg">
+                        <div class="card-body p-5">
+                            <h2 class="card-title text-center mb-4">اختر نوع الضغط</h2>
+
+                            <!-- Compression Type Options -->
+                            <div class="row mb-4">
+                                <div class="col-md-4">
+                                    <div class="card-option">
+                                        <input type="radio" id="lossless" name="compressionType" value="lossless" checked>
+                                        <label for="lossless" class="option-content">
+                                            <i class="bi bi-file-earmark-image fs-1 text-primary mb-2"></i>
+                                            <h5>ضغط بدون فقدان</h5>
+                                            <p class="small">PNG - جودة عالية</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card-option">
+                                        <input type="radio" id="lossy" name="compressionType" value="lossy">
+                                        <label for="lossy" class="option-content">
+                                            <i class="bi bi-file-earmark-image fs-1 text-success mb-2"></i>
+                                            <h5>ضغط مع فقدان</h5>
+                                            <p class="small">JPEG - حجم أصغر</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card-option">
+                                        <input type="radio" id="hybrid" name="compressionType" value="hybrid">
+                                        <label for="hybrid" class="option-content">
+                                            <i class="bi bi-file-earmark-image fs-1 text-warning mb-2"></i>
+                                            <h5>ضغط مختلط</h5>
+                                            <p class="small">WebP - متوافق</p>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- File Input -->
+                            <div class="mb-4">
+                                <label for="imageInput" class="form-label">اختر الصورة</label>
+                                <input type="file" class="form-control" id="imageInput" accept="image/*" required>
+                            </div>
+
+                            <!-- Batch Upload Section -->
+                            <div class="mb-4">
+                                <label class="form-label">أو رفع صور متعددة (دفعة)</label>
+                                <div id="dropZone" class="drop-zone">
+                                    <i class="bi bi-cloud-upload fs-1 text-muted mb-3"></i>
+                                    <p class="mb-2">اسحب وأفلت الصور هنا أو <span class="text-primary">اختر الملفات</span></p>
+                                    <input type="file" id="batchInput" accept="image/*" multiple style="display: none;">
+                                </div>
+                                <div id="batchFiles" class="mt-3" style="display: none;">
+                                    <h6>الصور المختارة:</h6>
+                                    <ul id="fileList" class="list-group"></ul>
+                                </div>
+                            </div>
+
+                            <!-- Quality Section -->
+                            <div id="qualitySection" class="mb-4" style="display: none;">
+                                <label for="qualitySlider" class="form-label">جودة الصورة: <span id="qualityValue">80</span>%</label>
+                                <input type="range" class="form-range" id="qualitySlider" min="10" max="100" value="80">
+                            </div>
+
+                            <!-- Advanced Settings -->
+                            <div class="mb-4">
+                                <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#advancedSettings" aria-expanded="false" aria-controls="advancedSettings">
+                                    <i class="bi bi-gear"></i> إعدادات متقدمة
+                                </button>
+                                <div class="collapse mt-3" id="advancedSettings">
+                                    <div class="card card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="maxWidth" class="form-label">العرض الأقصى (بكسل)</label>
+                                                <input type="number" class="form-control" id="maxWidth" placeholder="1920" min="100" max="4096">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="maxHeight" class="form-label">الارتفاع الأقصى (بكسل)</label>
+                                                <input type="number" class="form-control" id="maxHeight" placeholder="1080" min="100" max="4096">
+                                            </div>
+                                        </div>
+                                        <div class="mt-3">
+                                            <label for="outputFormat" class="form-label">تنسيق الإخراج</label>
+                                            <select class="form-select" id="outputFormat">
+                                                <option value="auto">تلقائي</option>
+                                                <option value="jpeg">JPEG</option>
+                                                <option value="png">PNG</option>
+                                                <option value="webp">WebP</option>
+                                            </select>
+                                        </div>
+                                        <div class="mt-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="preserveExif">
+                                                <label class="form-check-label" for="preserveExif">
+                                                    الحفاظ على بيانات EXIF
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Compress Button -->
+                            <div class="text-center mb-4">
+                                <button id="compressBtn" class="btn btn-success btn-lg">
+                                    <i class="bi bi-compress"></i> ضغط الصورة
+                                </button>
+                            </div>
+
+                            <!-- Progress Section -->
+                            <div id="progressSection" class="mb-4" style="display: none;">
+                                <div class="progress">
+                                    <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                                </div>
+                                <p class="text-center mt-2">جاري الضغط...</p>
+                            </div>
+
+                            <!-- Results Section -->
+                            <div id="results" class="row" style="display: none;">
+                                <div class="col-md-6">
+                                    <div class="glass-card p-3 hover-lift">
+                                        <h5 class="text-center mb-3" style="font-weight: bold; font-size: 1.2rem;">الصورة الأصلية</h5>
+                                        <img id="originalImage" src="" alt="Original Image" class="img-fluid mb-2 rounded transform-3d">
+                                        <p id="originalSize" class="text-center mb-2" style="font-size: 1.1rem; font-weight: bold; color: var(--md-text-primary);">
+                                            حجم الصورة الأصلية: <span id="originalSizeValue" style="color: var(--md-warning);"></span>
+                                        </p>
+                                        <div class="text-center">
+                                            <small class="text-muted" style="font-size: 0.9rem;">الجودة الأصلية - 100%</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="glass-card p-3 hover-lift">
+                                        <h5 class="text-center mb-3" style="font-weight: bold; font-size: 1.2rem;">الصورة المضغوطة</h5>
+                                        <img id="compressedImage" src="" alt="Compressed Image" class="img-fluid mb-2 rounded transform-3d">
+                                        <p id="compressedSize" class="text-center mb-2" style="font-size: 1.1rem; font-weight: bold; color: var(--md-text-primary);">
+                                            حجم الصورة المضغوطة: <span id="compressedSizeValue" style="color: var(--md-success);"></span>
+                                        </p>
+                                        <div class="text-center mb-3">
+                                            <small class="text-success" style="font-size: 0.9rem; font-weight: bold;">تم الضغط بنجاح!</small>
+                                        </div>
+                                        <div class="text-center">
+                                            <a id="downloadLink" href="#" class="btn btn-ripple btn-primary btn-glow" download style="font-weight: bold;">
+                                                <i class="bi bi-download"></i> تحميل الصورة
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Advanced Interactive Elements -->
+                            <div class="mt-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="glass-card p-3 hover-glow">
+                                            <h6 class="text-center mb-3">
+                                                <i class="bi bi-graph-up text-primary"></i> إحصائيات الضغط
+                                            </h6>
+                                            <div id="compressionStats" class="text-center" style="display: none;">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="stat-circle">
+                                                            <span id="compressionRatio" class="h4 text-success">0%</span>
+                                                            <small>معدل الضغط</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="stat-circle">
+                                                            <span id="sizeSaved" class="h4 text-info">0 MB</span>
+                                                            <small>المساحة الموفرة</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="glass-card p-3 hover-glow">
+                                            <h6 class="text-center mb-3">
+                                                <i class="bi bi-lightning-charge text-warning"></i> تحسينات الأداء
+                                            </h6>
+                                            <div id="performanceMetrics" class="text-center">
+                                                <div class="performance-bar">
+                                                    <div class="performance-fill" style="width: 0%"></div>
+                                                </div>
+                                                <small class="text-muted mt-2 d-block">سرعة المعالجة</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>آراء المستخدمين</h2>
+                <p class="section-subtitle">ما يقوله عملاؤنا عن أداتنا</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"أداة رائعة لضغط الصور! وفرت لي الكثير من المساحة على موقعي الإلكتروني مع الحفاظ على جودة الصور."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="bi bi-person-circle"></i>
+                            </div>
+                            <div class="author-info">
+                                <div class="author-name">أحمد محمد</div>
+                                <div class="author-title">مطور ويب</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"سهلة الاستخدام وسريعة جداً. أستخدمها يومياً لضغط صور منتجاتي قبل رفعها للمتجر الإلكتروني."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="bi bi-person-circle"></i>
+                            </div>
+                            <div class="author-info">
+                                <div class="author-name">فاطمة علي</div>
+                                <div class="author-title">صاحبة متجر إلكتروني</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"الأداة الأفضل التي جربتها لضغط الصور. تدعم جميع التنسيقات وتعطي نتائج ممتازة."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="bi bi-person-circle"></i>
+                            </div>
+                            <div class="author-info">
+                                <div class="author-name">محمد حسن</div>
+                                <div class="author-title">مصور فوتوغرافي</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <div class="brand-icon me-3">
+                            <i class="bi bi-image-fill"></i>
+                        </div>
+                        <div>
+                            <div class="brand-title">أداة ضغط الصور</div>
+                            <div class="brand-subtitle">Professional Image Compression</div>
+                        </div>
+                    </div>
+                    <p class="footer-description">أداة احترافية لضغط الصور مع الحفاظ على الجودة العالية والأداء السريع.</p>
+                </div>
+                <div class="col-lg-2 col-md-3">
+                    <h5 class="footer-title">الروابط</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#features">المميزات</a></li>
+                        <li><a href="#compression-section">البدء</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3">
+                    <h5 class="footer-title">الدعم</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">المساعدة</a></li>
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="footer-title">تابعنا</h5>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright">&copy; 2023 أداة ضغط الصور. جميع الحقوق محفوظة.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <ul class="footer-bottom-links">
+                            <li><a href="#">سياسة الخصوصية</a></li>
+                            <li><a href="#">شروط الاستخدام</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.2/dist/browser-image-compression.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
